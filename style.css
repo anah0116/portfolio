@@ -1,0 +1,174 @@
+/*----------------- Reset -----------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "pt_serifregular", sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*----------------- CSS properties -----------------------*/
+
+html {
+  /* baggrundsfarve */
+  --baggrundsfarve: #ffb7c7;
+
+  /* blå */
+  --farve2: #0157ff;
+}
+
+/*----------------- Body -----------------------*/
+body {
+  background-color: var(--baggrundsfarve);
+}
+
+/*----------------- Main -----------------------*/
+
+main {
+  /* Hvorfor?vi ved men stadig */
+  max-width: 1250px;
+  /* så margin fordeles lige på højre og venstre */
+  margin: 0 auto;
+  margin-bottom: 30rem;
+
+  /* OBS - hvordan ved banner? 
+  undersøg eller lappeløsning 
+  padding kun på mobil(tablet)*/
+  padding: 0 1rem 0 1rem;
+}
+
+/*----------------- Menu -----------------------*/
+header {
+  background-color: var(--baggrundsfarve);
+  border-bottom: solid black 6px;
+  /* så den forblier synlig */
+  position: sticky;
+  /* placering i toppen vel */
+  top: 0;
+  /* så logo og tekst er horisontale */
+  display: flex;
+
+  justify-content: flex-end;
+
+  /* Så Css filter ikker scrolles over menuen */
+  z-index: 1;
+}
+
+/* header nav {
+  
+} */
+
+.logo {
+  width: 4rem;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+}
+
+/*----------------- Forside -----------------------*/
+/* titelskift på forside */
+.portefolio_titel {
+  text-align: right;
+  border-right: solid 10px var(--farve2);
+  /* rgb(64, 0, 255); */
+}
+
+/*----------------- Vaelg Tema -----------------------*/
+.temax {
+  border-bottom: solid 10px var(--farve2);
+  width: 250px;
+}
+
+.temax p {
+  font-size: 4.7rem;
+  text-align: center;
+}
+.temax_img {
+  aspect-ratio: 357/260;
+  width: 250px;
+  /* background img url eller specific px på img*/
+  background-image: url(billede3.jpg);
+  background-size: cover;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  overflow: hidden;
+}
+/* --- tema links --- */
+.vaelg_tema a {
+  text-decoration: none;
+  color: black;
+}
+
+/* --- vaelg tema Hover ---*/
+.temax:hover .temax_img {
+  filter: none;
+}
+
+/* 
+Ser ikke fedt ud
+.temax:hover p {
+  color: var(--farve2);
+}
+
+.temax:hover {
+  border-bottom: solid 10px black;
+} */
+
+/*----------------- Mobil -----------------------*/
+@media (max-width: 600px) {
+  body {
+    background-color: pink;
+  }
+}
+/*----------------- Tablet -----------------------*/ /*----------------- Desktop -----------------------*/
+@media (min-width: 900px) {
+  /*------- Vaelg tema grid -------*/
+  .vaelg_tema {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: repeat(3, auto);
+    gap: 9rem;
+    width: 100%;
+    margin-inline: auto;
+    max-width: 1038px;
+  }
+
+  /* .vaelg_tema {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: repeat(3, auto);
+    gap: 5rem;
+    width: 950px;
+    margin-inline: auto;
+
+    /* max-width: 900px; */
+}
+/* display: grid;
+  grid-template-columns: repeat(3, 250px);
+  grid-template-rows: repeat(3, auto);
+  gap: 5rem;
+  max-width: 900px;
+  margin-inline: auto; */
+
+/* .vaelg_tema {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    row-gap: 3rem;
+    width: 100%;
+    margin-inline: auto;
+
+    /* max-width: 900px; */
