@@ -35,8 +35,7 @@ main {
   /* Hvorfor?vi ved men stadig */
   max-width: 1250px;
   /* så margin fordeles lige på højre og venstre */
-  margin: 0 auto;
-  margin-bottom: 30rem;
+  margin: 4rem auto 30rem auto;
 
   /* OBS - hvordan ved banner? 
   undersøg eller lappeløsning 
@@ -104,7 +103,6 @@ header nav ul li a {
   background-size: cover;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
-  overflow: hidden;
 }
 /* --- tema links --- */
 .vaelg_tema a {
@@ -115,6 +113,22 @@ header nav ul li a {
 /* --- vaelg tema Hover ---*/
 .temax:hover .temax_img {
   filter: none;
+}
+
+/* test tema */
+.zoom_test {
+  background-image: none;
+  aspect-ratio: 357/260;
+  width: 250px;
+  overflow: hidden;
+}
+
+.test img {
+  transition: ease-out 0.3s;
+}
+
+.temax:hover img {
+  transform: scale(1.2);
 }
 
 /* 
@@ -133,8 +147,16 @@ Ser ikke fedt ud
     background-color: pink;
   }
 }
-/*----------------- Tablet -----------------------*/ /*----------------- Desktop -----------------------*/
+/*----------------- Tablet -----------------------*/
+/*----------------- Desktop -----------------------*/
 @media (min-width: 900px) {
+  /*------- forside -------*/
+  .portefolio_titel p {
+    font-size: 8rem;
+    /* Der er noget luft omkring paragraf som gør den blå border ikke stopper præcis ved bogstaverne. */
+    line-height: 0.7155;
+    margin-bottom: 2.2rem;
+  }
   /*------- Vaelg tema grid -------*/
   .vaelg_tema {
     display: grid;
