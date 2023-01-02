@@ -53,8 +53,8 @@ header {
   top: 0;
   /* så logo og tekst er horisontale */
   display: flex;
-
-  justify-content: flex-end;
+  justify-content: space-between;
+  /* justify-content: flex-end; */
 
   /* Så Css filter ikker scrolles over menuen */
   z-index: 1;
@@ -86,51 +86,46 @@ header nav ul li a {
 }
 
 /*----------------- Vaelg Tema -----------------------*/
+
+/* blå linje under tema x samt bredde */
 .temax {
   border-bottom: solid 10px var(--farve2);
   width: 250px;
 }
 
+/* tekststyle på tema x */
 .temax p {
   font-size: 4.7rem;
   text-align: center;
 }
-.temax_img {
-  aspect-ratio: 357/260;
-  width: 250px;
-  /* background img url eller specific px på img*/
-  background-image: url(billede3.jpg);
-  background-size: cover;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-}
-/* --- tema links --- */
+
+/*  tema linket er blot sort  */
 .vaelg_tema a {
   text-decoration: none;
   color: black;
 }
 
-/* --- vaelg tema Hover ---*/
-.temax:hover .temax_img {
-  filter: none;
-}
-
-/* test tema */
-.zoom_test {
-  background-image: none;
+/* DEN RIGTIGE */
+.ramme_og_filter {
   aspect-ratio: 357/260;
   width: 250px;
   overflow: hidden;
+  filter: grayscale(100%);
 }
 
-.test img {
+.ramme_og_filter img {
   transition: ease-out 0.3s;
+}
+
+/*--- tema x hover--- */
+
+.temax:hover .ramme_og_filter {
+  filter: none;
 }
 
 .temax:hover img {
   transform: scale(1.2);
 }
-
 /* 
 Ser ikke fedt ud
 .temax:hover p {
