@@ -1,0 +1,73 @@
+/*----------------- Reset -----------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "pt_serifregular", sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/*----------------- Menu -----------------------*/
+header {
+  background-color: pink;
+  border-bottom: solid black 6px;
+  /* så den forblier synlig */
+  position: sticky;
+  /* placering i toppen vel */
+  top: 0;
+  /* så logo og tekst er horisontale */
+
+  /* justify-content: flex-end; */
+
+  /* Så Css filter ikker scrolles over menuen */
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo {
+  width: 4rem;
+}
+
+header li {
+  list-style: none;
+}
+
+.nav_link {
+  text-decoration: none;
+  color: black;
+}
+
+.burger_bar {
+  display: block;
+  background-color: black;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+}
+
+.menu_liste {
+  position: fixed;
+  background-color: pink;
+  width: 100%;
+  /* hide from view */
+  left: -100%;
+  /* top placering, under første menubar */
+  top: 70px;
+  gap: 0;
+  text-align: center;
+}
+
+.aktiv {
+  left: 0;
+}
