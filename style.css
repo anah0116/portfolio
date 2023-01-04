@@ -23,7 +23,10 @@ html {
   /* blå */
   --farve2: #0157ff;
 }
-
+/* ----------------------- HTML ------------------------- */
+html {
+  scroll-behavior: smooth;
+}
 /*----------------- Body -----------------------*/
 body {
   background-color: var(--baggrundsfarve);
@@ -35,12 +38,18 @@ main {
   /* Hvorfor?vi ved men stadig */
   max-width: 1250px;
   /* så margin fordeles lige på højre og venstre */
-  margin: 4rem auto 30rem auto;
+  margin: 4rem auto 10rem auto;
 
   /* OBS - hvordan ved banner? 
   undersøg eller lappeløsning 
   padding kun på mobil(tablet)*/
   padding: 0 1rem 0 1rem;
+}
+
+/*----------------- Footer -----------------------*/
+footer {
+  background-color: white;
+  padding: 4rem 5rem;
 }
 
 /*----------------- Menu -----------------------*/
@@ -81,21 +90,25 @@ header nav ul li a {
 /* titelskift på forside */
 .portefolio_titel {
   text-align: right;
-  border-right: solid 10px var(--farve2);
+  border-right: solid 13px var(--farve2);
+  font-family: poppins;
   /* rgb(64, 0, 255); */
 }
 
-/*----------------- Vaelg Tema -----------------------*/
+/*-------- Vaelg Tema ------------*/
 
 /* blå linje under tema x samt bredde */
 .temax {
   border-bottom: solid 10px var(--farve2);
-  width: 250px;
+  width: 230px;
 }
 
 /* tekststyle på tema x */
 .temax p {
-  font-size: 4.7rem;
+  font-family: poppins;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 3.7rem;
   text-align: center;
 }
 
@@ -108,7 +121,7 @@ header nav ul li a {
 /* DEN RIGTIGE */
 .ramme_og_filter {
   aspect-ratio: 357/260;
-  width: 250px;
+  width: 230px;
   overflow: hidden;
   filter: grayscale(100%);
 }
@@ -136,6 +149,12 @@ Ser ikke fedt ud
   border-bottom: solid 10px black;
 } */
 
+.pil_forside {
+  width: 120px;
+  margin: 1rem 0 0 0;
+  margin-inline: auto;
+}
+
 /*----------------- Mobil -----------------------*/
 @media (max-width: 600px) {
   body {
@@ -146,6 +165,9 @@ Ser ikke fedt ud
 /*----------------- Desktop -----------------------*/
 @media (min-width: 900px) {
   /*------- forside -------*/
+  .portefolio_titel {
+    padding-right: 3rem;
+  }
   .portefolio_titel p {
     font-size: 8rem;
     /* Der er noget luft omkring paragraf som gør den blå border ikke stopper præcis ved bogstaverne. */
@@ -157,10 +179,13 @@ Ser ikke fedt ud
     display: grid;
     grid-template-columns: repeat(3, 250px);
     grid-template-rows: repeat(3, auto);
-    gap: 9rem;
+    gap: 6rem;
     width: 100%;
+    /* afstand til pilen er både padding og margin da, menuen ellers skjuler vaelg_tema */
+    padding: 6rem 0 0 0;
+    margin: 4rem 0 0 0;
     margin-inline: auto;
-    max-width: 1038px;
+    max-width: 882px;
   }
 
   /* .vaelg_tema {
