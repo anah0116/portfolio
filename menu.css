@@ -15,7 +15,7 @@ img {
 }
 /*----------------- Menu -----------------------*/
 header {
-  background-color: pink;
+  background-color: var(--baggrundsfarve);
   border-bottom: solid black 6px;
   /* så den forblier synlig */
   position: sticky;
@@ -48,26 +48,102 @@ header li {
   color: black;
 }
 
+/* Burger */
+
+.burger {
+  /* placering i midten af menuen (y-akse) */
+  place-self: center;
+  /* afstand til højre side af vindue */
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
 .burger_bar {
   display: block;
   background-color: black;
-  width: 25px;
+  width: 40px;
+  height: 5px;
+  margin: 8px;
+
+  /* width: 25px;
   height: 3px;
-  margin: 5px;
+  margin: 5px; */
+  /* lækker overgang til kryds, dog drop på nr2 */
+  transition: ease-in 0.4s;
+}
+
+/* burger kryds */
+.burger_aktiv .burger_bar:nth-child(2) {
+  /* kun to linjer skal bruges til burgerkryds, derfor er den midterste usynlig */
+  opacity: 0;
+}
+
+.burger_aktiv .burger_bar:nth-child(1) {
+  transform: translateY(12px) rotate(45deg);
+}
+.burger_aktiv .burger_bar:nth-child(3) {
+  transform: translateY(-14px) rotate(-45deg);
 }
 
 .menu_liste {
   position: fixed;
-  background-color: pink;
-  width: 100%;
+  background-color: var(--baggrundsfarve);
+  width: 101%;
+  /* slide fra højre test og mindre*/
+  /* left: 100%; slide fra højre test og mindre */
+
   /* hide from view */
-  left: -100%;
+  left: -101%;
   /* top placering, under første menubar */
   top: 70px;
   gap: 0;
   text-align: center;
+  padding-bottom: 2rem;
+  border-bottom: solid black 6px;
+  border-right: solid black 6px;
+
+  /* transition */
+  transition: ease-in 0.5s;
 }
 
 .aktiv {
   left: 0;
+  /* slide fra højre test og mindre*/
+  /* left: 50%; slide fra højre test og mindre */
 }
+
+/* ------ Style på menu_liste ------------- */
+
+.portfolio_om_mig {
+  font-family: poppins;
+  font-weight: bold;
+}
+
+.nav_tema {
+  padding: 0 0 0 2rem;
+}
+
+header li {
+  margin-bottom: 0.5rem;
+}
+
+.nav_ommig {
+  margin-top: 1rem;
+}
+
+/* menu_liste som flexbox, med gap som afstand mellem linjer */
+/* .menu_liste {
+  position: fixed;
+  background-color: pink;
+  width: 100%;
+  left: -100%;
+  top: 70px;
+  gap: 7px;
+  text-align: center;
+  padding-bottom: 2rem;
+  border-bottom: solid black 6px;
+  border-right: solid black 6px;
+  transition: ease-in 0.5s;
+  display: flex;
+  flex-direction: column;
+} */

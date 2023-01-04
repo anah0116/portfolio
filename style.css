@@ -27,6 +27,25 @@ html {
 html {
   scroll-behavior: smooth;
 }
+
+/* ----------------------- CSS animationer ------------------------- */
+
+.pil_ani {
+  animation-name: pil_ani_kf;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  animation-direction: alternate;
+}
+
+@keyframes pil_ani_kf {
+  0% {
+  }
+  100% {
+    translate: 0 110%;
+  }
+}
+
 /*----------------- Body -----------------------*/
 body {
   background-color: var(--baggrundsfarve);
@@ -50,40 +69,6 @@ main {
 footer {
   background-color: white;
   padding: 4rem 5rem;
-}
-
-/*----------------- Menu -----------------------*/
-header {
-  background-color: var(--baggrundsfarve);
-  border-bottom: solid black 6px;
-  /* så den forblier synlig */
-  position: sticky;
-  /* placering i toppen vel */
-  top: 0;
-  /* så logo og tekst er horisontale */
-  display: flex;
-  justify-content: space-between;
-  /* justify-content: flex-end; */
-
-  /* Så Css filter ikker scrolles over menuen */
-  z-index: 1;
-}
-
-/* header nav {
-  
-} */
-
-.logo {
-  width: 4rem;
-}
-header nav ul {
-  display: flex;
-  list-style: none;
-  gap: 1rem;
-}
-
-header nav ul li a {
-  text-decoration: none;
 }
 
 /*----------------- Forside -----------------------*/

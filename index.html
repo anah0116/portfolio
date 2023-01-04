@@ -16,28 +16,31 @@
     <!-- favicon herunder -->
     <!-- Css -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
     <!-- indsæt titel -->
     <title>Portfolio</title>
 </head>
 
 <body>
     <header>
-        <div class="logo"> <a href="index.html"> <img src="logo.svg" alt="logo"></a></div>
-
-
         <nav>
-            <ul>
-
-                <li><a href="tema2.html">Tema 2</a></li>
-                <li><a href="tema3.html">Tema 3</a></li>
-                <li><a href="tema4.html">Tema 4</a></li>
-                <li><a href="tema5.html">Tema 5</a></li>
-                <li><a href="tema6.html">Tema 6</a></li>
-                <li><a href="ommig.html">Om mig</a></li>
+            <div class="logo"> <a href="index.html"> <img src="logo.svg" alt="logo"></a></div>
+            <ul class="menu_liste">
+                <li class="portfolio_om_mig">Portfolio</li>
+                <li><a href="tema2.html" class="nav_link nav_tema">Tema 2</a></li>
+                <li><a href="tema3.html" class="nav_link nav_tema">Tema 3</a></li>
+                <li><a href="tema4.html" class="nav_link nav_tema">Tema 4</a></li>
+                <li><a href="tema5.html" class="nav_link nav_tema">Tema 5</a></li>
+                <li><a href="tema6.html" class="nav_link nav_tema">Tema 6</a></li>
+                <li class="nav_ommig"><a href="ommig.html" class="nav_link portfolio_om_mig">Om mig</a></li>
 
             </ul>
+            <div class="burger">
+                <span class="burger_bar"></span>
+                <span class="burger_bar"></span>
+                <span class="burger_bar"></span>
+            </div>
         </nav>
-
     </header>
     <main>
         <div>
@@ -113,6 +116,9 @@
         <p>Portfolio af Anahita</p>
         <p>dato</p>
     </footer>
+
+    <!-- Javascript -->
+    <script src="javascript.js"></script>
 </body>
 
 </html>
