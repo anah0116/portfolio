@@ -113,6 +113,10 @@ footer {
 
 .ramme_og_filter img {
   transition: ease-out 0.3s;
+  /* prøver at se om de fylder rammen ud med height på 100%
+  Ja det virker, men billederne ser ikke lækre ud */
+  height: 100%;
+  width: auto;
 }
 
 /*--- tema x hover--- */
@@ -142,11 +146,33 @@ Ser ikke fedt ud
 
 /*----------------- Mobil -----------------------*/
 @media (max-width: 600px) {
-  body {
-    background-color: pink;
+  /* vælg tema på forsiden */
+  .vaelg_tema {
+    max-width: 230px;
+    padding: 6rem 0 0 0;
+    margin: 4rem 0 0 0;
+    margin-inline: auto;
+  }
+
+  .temax {
+    margin: 0 0 5rem 0;
   }
 }
 /*----------------- Tablet -----------------------*/
+@media (min-width: 600px) {
+  .vaelg_tema {
+    display: grid;
+    grid-template-columns: repeat(2, 230px);
+    grid-template-rows: repeat(3, auto);
+    gap: 6rem;
+    width: 100%;
+    /* afstand til pilen er både padding og margin da, menuen ellers skjuler vaelg_tema */
+    padding: 6rem 0 0 0;
+    margin: 4rem 0 0 0;
+    margin-inline: auto;
+    max-width: 556px;
+  }
+}
 /*----------------- Desktop -----------------------*/
 @media (min-width: 900px) {
   /*------- forside -------*/
@@ -162,7 +188,7 @@ Ser ikke fedt ud
   /*------- Vaelg tema grid -------*/
   .vaelg_tema {
     display: grid;
-    grid-template-columns: repeat(3, 250px);
+    grid-template-columns: repeat(3, 230px);
     grid-template-rows: repeat(3, auto);
     gap: 6rem;
     width: 100%;
@@ -199,3 +225,48 @@ Ser ikke fedt ud
     margin-inline: auto;
 
     /* max-width: 900px; */
+
+/* Test af emnesite tekst */
+
+.usynlig_baggrund_til_pile {
+  position: relative;
+  padding: 2rem 0 2rem 0;
+}
+
+.hvid_baggrund {
+  background-color: white;
+  width: 100%;
+  /* position: relative; */
+}
+
+/* .emnesite_tekst {
+  max-width: 500px;
+} */
+.emnesite_hele_teks_del {
+  margin-inline: auto;
+  max-width: 500px;
+  /* så tekst er "bestykket", pile ikke rammer */
+  padding: 3rem 1rem 3rem 1rem;
+}
+
+.emnesite_blae_border {
+  /* blå border */
+  border-left: solid var(--farve2) 10px;
+  padding: 0 0 0 1rem;
+}
+
+.pil_absolute1 {
+  position: absolute;
+  /* aspect-ratio: 1/1; */
+  width: 10%;
+  top: 0;
+  left: 0;
+}
+
+.pil_absolute2 {
+  position: absolute;
+  /* aspect-ratio: 1/1; */
+  width: 10%;
+  top: 90%;
+  left: 90%;
+}
