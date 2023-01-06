@@ -35,6 +35,7 @@ nav {
   height: 70px;
 }
 
+/* logo width for img'et, som jeg har fjernet nu */
 .logo {
   width: 4rem;
 }
@@ -93,21 +94,21 @@ header li {
   /* left: 100%; slide fra højre test og mindre */
 
   /* hide from view */
-  left: -101%;
+  left: 101%;
   /* top placering, under første menubar */
   top: 70px;
-  gap: 0;
+  /* gap: 0; er denne gap overhovedet nødvendig, gap:0 , er vel default eller?*/
   text-align: center;
   padding-bottom: 2rem;
   border-bottom: solid black 6px;
-  border-right: solid black 6px;
+  border-left: solid black 6px;
 
   /* transition */
   transition: ease-in 0.5s;
 }
 
 .aktiv {
-  left: 0;
+  left: -1%;
   /* slide fra højre test og mindre*/
   /* left: 50%; slide fra højre test og mindre */
 }
@@ -117,10 +118,12 @@ header li {
 .portfolio_om_mig {
   font-family: poppins;
   font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .nav_tema {
-  padding: 0 0 0 2rem;
+  font-family: poppins;
+  font-size: 1.2;
 }
 
 header li {
@@ -128,7 +131,7 @@ header li {
 }
 
 .nav_ommig {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 /* menu_liste som flexbox, med gap som afstand mellem linjer */
@@ -147,3 +150,22 @@ header li {
   display: flex;
   flex-direction: column;
 } */
+
+/* ------ Midlertidigt logo navn */
+.logo_navn {
+  display: flex;
+}
+.logo_navn a {
+  font-family: mulish;
+  font-weight: 700;
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+  place-self: center;
+  margin: 0 0 0 1.2rem;
+}
+.logo_navn span {
+  color: var(--farve2);
+  font-weight: 900;
+  font-size: 2.5rem;
+}

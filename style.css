@@ -68,7 +68,11 @@ main {
 /*----------------- Footer -----------------------*/
 footer {
   background-color: white;
-  padding: 4rem 5rem;
+  padding: 4rem 0 4rem 1.5rem;
+}
+
+footer p {
+  font-family: poppins;
 }
 
 /*----------------- Forside -----------------------*/
@@ -144,8 +148,30 @@ Ser ikke fedt ud
   margin-inline: auto;
 }
 
+/* -------------------- Tema siderne ---------------------- */
+/* ------ H1 ----------- */
+h1 {
+  font-family: poppins;
+  text-align: center;
+}
+
 /*----------------- Mobil -----------------------*/
 @media (max-width: 600px) {
+  /*------- forside -------*/
+  .portefolio_titel {
+    padding-right: 1rem;
+    border-right: solid 8px var(--farve2);
+  }
+  .portefolio_titel p {
+    font-size: 2.4rem;
+    /* Der er noget luft omkring paragraf som gør den blå border ikke stopper præcis ved bogstaverne. */
+    line-height: 0.7155;
+    margin-bottom: 0.9rem;
+  }
+
+  .pil_forside {
+    width: 80px;
+  }
   /* vælg tema på forsiden */
   .vaelg_tema {
     max-width: 230px;
@@ -157,9 +183,27 @@ Ser ikke fedt ud
   .temax {
     margin: 0 0 5rem 0;
   }
+  /* ---------------- tema siderne ------------- */
+  /* ----- H1 ------ */
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 7rem;
+  }
 }
 /*----------------- Tablet -----------------------*/
 @media (min-width: 600px) {
+  /*---------- forside ------------*/
+  .portefolio_titel {
+    padding-right: 2rem;
+    border-right: solid 10px var(--farve2);
+  }
+  .portefolio_titel p {
+    font-size: 5rem;
+    /* Der er noget luft omkring paragraf som gør den blå border ikke stopper præcis ved bogstaverne. */
+    line-height: 0.7155;
+    margin-bottom: 1.8rem;
+  }
+  /* ---- vaelg tema ----- */
   .vaelg_tema {
     display: grid;
     grid-template-columns: repeat(2, 230px);
@@ -172,9 +216,16 @@ Ser ikke fedt ud
     margin-inline: auto;
     max-width: 556px;
   }
+
+  /* ---------------- tema siderne ------------- */
+  /* ----- H1 ------ */
+  h1 {
+    font-size: 7rem;
+    margin-bottom: 7rem;
+  }
 }
 /*----------------- Desktop -----------------------*/
-@media (min-width: 900px) {
+@media (min-width: 992px) {
   /*------- forside -------*/
   .portefolio_titel {
     padding-right: 3rem;
@@ -197,6 +248,12 @@ Ser ikke fedt ud
     margin: 4rem 0 0 0;
     margin-inline: auto;
     max-width: 882px;
+  }
+  /* ---------------- tema siderne ------------- */
+  /* ----- H1 ------ */
+  h1 {
+    font-size: 8rem;
+    margin-bottom: 7rem;
   }
 
   /* .vaelg_tema {
