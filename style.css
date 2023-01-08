@@ -277,14 +277,30 @@ h1 {
 
 /* proces menu */
 /* lav diplay block og flex på den, eller sæt i div?, nej  */
+/* test af proces menu som flex */
 .proces_menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
   margin: 0 0 1rem;
 }
+
 .proces_menu a {
   font-family: poppins;
   font-size: 1.2rem;
   color: black;
   font-weight: 500;
+}
+
+.proces_menu a:hover {
+  color: var(--farve2);
+}
+
+/* pilotvideo grid */
+.pv_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
 }
 
 /*----------------- Mobil -----------------------*/
@@ -334,6 +350,14 @@ h1 {
   }
 
   /* ----- Proces ----- */
+  /* proces menu tema 4 */
+  #proces_menu4 {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
   .proces_grid {
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -342,8 +366,14 @@ h1 {
   .proces_grid p {
     font-size: 1.2rem;
   }
+
   .proces_grid img {
     margin: 0 0 2.5rem 0;
+  }
+
+  /* ik margin under disse fotos */
+  .pv_grid .mrg_none {
+    margin: 0;
   }
 
   /* order */
@@ -425,6 +455,15 @@ h1 {
     margin: 0 0 5rem 0;
   }
 }
+/* ----- Proces ----- */
+/* proces menu tema 4 */
+#proces_menu4 {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
 /*----------------- Desktop -----------------------*/
 @media (min-width: 992px) {
   /*------- forside -------*/
@@ -466,6 +505,16 @@ h1 {
   /* --- Hvid baggrund eunder tekst */
   .hvid_baggrund {
     margin: 0 0 6rem 0;
+  }
+
+  /* ----- Proces ----- */
+  /* proces menu tema 4 */
+  #proces_menu4 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    margin: 0 0 1rem;
   }
 
   /* .vaelg_tema {
@@ -526,7 +575,7 @@ h1 {
 
 /* forside blomster test */
 .fs_blomster {
-  max-width: 300px;
+  max-width: 600px;
 }
 
 /* .fs_blomster_titel_grid {
@@ -536,4 +585,6 @@ h1 {
 
 .fs_blomster_titel_grid {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
