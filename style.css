@@ -162,7 +162,7 @@ h1 {
 }
 /* ---------- Tema sider tekst---------------------- */
 
-/* --- Hvid baggrund eunder tekst */
+/* --- Hvid baggrund rundt om tekst */
 .hvid_baggrund {
   background-color: white;
   width: 100%;
@@ -170,7 +170,7 @@ h1 {
 }
 
 /* --- div rundt om overskrift og teksten ---*/
-.emnesite_tekst_og_border {
+.tema_tekst_og_border {
   /* blå border */
   border-left: solid var(--farve2) 10px;
   padding: 0 0 0 1.5rem;
@@ -179,17 +179,94 @@ h1 {
 }
 
 /* --- tekst overskriften --- */
-.emnesite_overskrift {
+.tema_overskrift {
   font-family: poppins;
   font-size: 1.5rem;
   margin: 0 0 0.5rem 0;
 }
 
 /* --- selve brødteksten --- */
-.emnesite_tekst p {
+.tema_tekst p {
   font-family: mulish;
   line-height: 1.5;
 }
+/* - Løesning og proces overskrifter */
+.loes_pro_overskrift {
+  font-family: poppins;
+  font-size: 2.5rem;
+}
+
+/* ----- Loesning ------- */
+
+.foto_erstatning {
+  background-color: antiquewhite;
+  aspect-ratio: 2.7/1;
+  max-width: 100%;
+}
+
+/* loesning grid */
+.loesning_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin: 0 0 6rem 0;
+}
+
+/* knapper */
+.knap a {
+  font-family: poppins;
+  font-size: 1.4rem;
+  color: var(--farve2);
+  text-decoration: none;
+  padding: 0.8rem 0;
+}
+
+.knap {
+  display: grid;
+  place-content: center;
+  margin: 0 0 1rem 0;
+  width: 100%;
+  border: solid 6px var(--farve2);
+}
+
+/* knap hover */
+.knap:hover {
+  background-color: var(--farve2);
+}
+
+.knap:hover a {
+  color: white;
+}
+
+/* ----- Proces ------- */
+.proces_grid p {
+  font-size: 1.5rem;
+  font-family: poppins;
+  padding: 0 0 0 1rem;
+  border-left: solid 10px var(--farve2);
+}
+
+.proces_grid span {
+  font-weight: 800;
+}
+
+/*-- ekstra padding melllem forskellige procesdele */
+.proces_ekstra_pad {
+  padding: 0 0 3rem 0;
+}
+
+/* proces menu */
+/* lav diplay block og flex på den, eller sæt i div?, nej  */
+.proces_menu {
+  margin: 0 0 1rem;
+}
+.proces_menu a {
+  font-family: poppins;
+  font-size: 1.2rem;
+  color: black;
+  font-weight: 500;
+}
+
 /*----------------- Mobil -----------------------*/
 @media (max-width: 600px) {
   /*------- forside -------*/
@@ -224,6 +301,12 @@ h1 {
     font-size: 4rem;
     margin-bottom: 7rem;
   }
+  /* ----- Løsning ----- */
+  .loesning_grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  /* ----- Proces ----- */
 }
 /*----------------- Tablet -----------------------*/
 @media (min-width: 600px) {
@@ -255,8 +338,18 @@ h1 {
   /* ---------------- tema siderne ------------- */
   /* ----- H1 ------ */
   h1 {
-    font-size: 7rem;
-    margin-bottom: 7rem;
+    font-size: 6rem;
+    margin-bottom: 2rem;
+  }
+
+  /* ---tema tekst--- */
+  .hvid_baggrund {
+    margin: 0 0 5rem;
+  }
+
+  /* løsning */
+  .loesning_grid {
+    margin: 0 0 5rem 0;
   }
 }
 /*----------------- Desktop -----------------------*/
@@ -291,11 +384,15 @@ h1 {
     margin-bottom: 1.5rem;
   }
   /* tema tekst grid */
-  .emnesite_tekst {
+  .tema_tekst {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     max-width: 900px;
+  }
+  /* --- Hvid baggrund eunder tekst */
+  .hvid_baggrund {
+    margin: 0 0 6rem 0;
   }
 
   /* .vaelg_tema {
@@ -327,7 +424,7 @@ h1 {
 
 /* proces og løsning og knap */
 
-.loesning_container {
+/* .loesning_container {
   max-width: 500px;
   padding: 0 1.5rem 0 0;
   border-right: solid 10px var(--farve2);
@@ -344,42 +441,21 @@ h1 {
 .proces_container img {
   max-width: 500px;
 }
+*/
 
-.knap a {
-  font-family: poppins;
-  color: black;
-  text-decoration: none;
-  padding: 1.5rem;
-}
-
-.knap {
-  display: grid;
-  place-content: center;
-  margin: 0 0 1rem 0;
-  width: 100%;
-  border: solid 6px black;
-}
-
-.proces_loesning_grid {
+/* .proces_loesning_grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-inline: auto;
   gap: 80px;
   max-width: 1080px;
-}
+} */
 
-/* test af proces grid */
+/*---- test af proces grid ----*/
 @media (min-width: 600px) {
   .proces_grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    gap: 2rem;
   }
-}
-
-.proces_grid p {
-  font-size: 1.5rem;
-  font-family: poppins;
-  padding: 0 0 0 1rem;
-  border-left: solid 10px var(--farve2);
 }
