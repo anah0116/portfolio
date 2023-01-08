@@ -251,6 +251,14 @@ h1 {
 }
 
 /* ----- Proces ------- */
+/*---- test af proces grid ----*/
+
+.proces_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
 .proces_grid p {
   font-size: 1.5rem;
   font-family: poppins;
@@ -326,7 +334,52 @@ h1 {
   }
 
   /* ----- Proces ----- */
+  .proces_grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .proces_grid p {
+    font-size: 1.2rem;
+  }
+  .proces_grid img {
+    margin: 0 0 2.5rem 0;
+  }
+
+  /* order */
+
+  .order1 {
+    order: 1;
+  }
+  .order2 {
+    order: 2;
+  }
+  .order3 {
+    order: 3;
+  }
+  .order4 {
+    order: 4;
+  }
+  .order5 {
+    order: 5;
+  }
+  .order6 {
+    order: 6;
+  }
+  .order7 {
+    order: 7;
+  }
+  .order8 {
+    order: 8;
+  }
+  .order9 {
+    order: 9;
+  }
+  .order10 {
+    order: 10;
+  }
 }
+
 /*----------------- Tablet -----------------------*/
 @media (min-width: 600px) {
   /*---------- forside ------------*/
@@ -471,11 +524,16 @@ h1 {
   max-width: 1080px;
 } */
 
-/*---- test af proces grid ----*/
-@media (min-width: 600px) {
-  .proces_grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
+/* forside blomster test */
+.fs_blomster {
+  max-width: 300px;
+}
+
+/* .fs_blomster_titel_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+} */
+
+.fs_blomster_titel_grid {
+  display: flex;
 }
