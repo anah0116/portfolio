@@ -192,8 +192,9 @@ h1 {
 }
 /* - Løesning og proces overskrifter */
 .loes_pro_overskrift {
-  font-family: poppins;
+  font-family: mulish;
   font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 /* ----- Loesning ------- */
@@ -213,10 +214,10 @@ h1 {
 }
 
 /* knapper */
-.knap a {
+.knap p {
   font-family: poppins;
   font-size: 1.4rem;
-  color: var(--farve2);
+  color: white;
   text-decoration: none;
   padding: 0.8rem 0;
 }
@@ -226,16 +227,27 @@ h1 {
   place-content: center;
   margin: 0 0 1rem 0;
   width: 100%;
+
+  background-color: var(--farve2);
   border: solid 6px var(--farve2);
 }
 
-/* knap hover */
-.knap:hover {
-  background-color: var(--farve2);
+.text_align_c {
+  text-align: center;
 }
 
-.knap:hover a {
-  color: white;
+/* knap hover */
+.knap_img_div:hover .knap {
+  background-color: white;
+  border: solid 6px var(--farve2);
+}
+
+.knap_img_div:hover .knap p {
+  color: var(--farve2);
+}
+
+.knap_img_div a {
+  text-decoration: none;
 }
 
 /* ----- Proces ------- */
@@ -251,9 +263,9 @@ h1 {
 }
 
 /*-- ekstra padding melllem forskellige procesdele */
-.proces_ekstra_pad {
+/* .proces_ekstra_pad {
   padding: 0 0 3rem 0;
-}
+} */
 
 /* proces menu */
 /* lav diplay block og flex på den, eller sæt i div?, nej  */
@@ -299,13 +311,20 @@ h1 {
   /* ----- H1 ------ */
   h1 {
     font-size: 4rem;
-    margin-bottom: 7rem;
+    margin-bottom: 1.5rem;
+  }
+  /* ---tema tekst--- */
+  .hvid_baggrund {
+    margin: 0 0 6rem;
+    padding: 0 0 3rem 0;
   }
   /* ----- Løsning ----- */
   .loesning_grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+    margin: 0 0 6rem 0;
   }
+
   /* ----- Proces ----- */
 }
 /*----------------- Tablet -----------------------*/
@@ -345,6 +364,7 @@ h1 {
   /* ---tema tekst--- */
   .hvid_baggrund {
     margin: 0 0 5rem;
+    padding: 1rem 2rem 4rem 2rem;
   }
 
   /* løsning */
