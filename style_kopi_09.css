@@ -694,10 +694,10 @@ h1 {
 }
 
 /* tegninger */
-/* .tegning {
+.tegning {
   max-height: 350px;
   width: auto;
-} */
+}
 
 /* portræt */
 /* .portraet {
@@ -803,16 +803,9 @@ h1 {
     margin-top: 3rem;
   }
   /* CV og tegninger flex */
-  /* .tegninger_cv_grid {
+  .tegninger_cv_grid {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-  } */
-
-  /* tegning_og_cv_grid */
-  .tegning_og_cv_grid {
-    display: grid;
-    grid-template-columns: 1fr;
     gap: 2rem;
   }
 }
@@ -852,12 +845,19 @@ h1 {
   }
   /* SENEST ÆNDREDE  */
 
-  /* tegning_og_cv_grid */
-  .tegning_og_cv_grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 1rem;
-  }
+  /* tegninger */
+  /* .tegning {
+    max-height: 200px;
+    width: auto;
+  } */
+  /* CV og tegninger flex */
+
+  /* .tegninger_cv_grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+  } */
 }
 
 @media (min-width: 992px) {
@@ -884,17 +884,11 @@ h1 {
   }
 
   /* CV og tegninger flex */
-  /* .tegninger_cv_grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
-  } */
-
-  /* .tegninger_cv_grid {
+  .tegninger_cv_grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  } */
+  }
 
   /* SENEST ÆNDREDE */
 
@@ -910,13 +904,6 @@ h1 {
 
   .dd_mrg {
     margin: 0;
-  }
-
-  /* tegning_og_cv_grid */
-  .tegning_og_cv_grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 1rem;
   }
 }
 
@@ -936,10 +923,3 @@ h1 {
 
 
 */
-/* TEST */
-/* tegning_og_cv_grid */
-/* .tegning_og_cv_grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 1rem;
-} */
