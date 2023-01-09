@@ -160,6 +160,7 @@ h1 {
   font-family: poppins;
   text-align: center;
 }
+
 /* ---------- Tema sider tekst---------------------- */
 
 /* --- Hvid baggrund rundt om tekst */
@@ -188,8 +189,19 @@ h1 {
 /* --- selve brødteksten --- */
 .tema_tekst p {
   font-family: mulish;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
+
+.tema_tekst .p_mrg span {
+  font-style: italic;
+}
+/* P_margin */
+.p_mrg {
+  /* OBS ændres i mobil og tablet! */
+  margin: 0 0 1rem 0;
+}
+
 /* - Løesning og proces overskrifter */
 .loes_pro_overskrift {
   font-family: mulish;
@@ -340,8 +352,13 @@ h1 {
   /* ---tema tekst--- */
   .hvid_baggrund {
     margin: 0 0 6rem;
-    padding: 0 0 3rem 0;
+    padding: 0 1rem 3rem 0;
   }
+  /* margin mellem 'desktop' kolonner */
+  .col_mrg {
+    margin: 0 0 1rem 0;
+  }
+
   /* ----- Løsning ----- */
   .loesning_grid {
     grid-template-columns: 1fr;
@@ -450,6 +467,12 @@ h1 {
     padding: 1rem 2rem 4rem 2rem;
   }
 
+  /* -- max width på tema tekst*/
+  .tema_tekst_og_border {
+    max-width: 600px;
+    margin-inline: auto;
+  }
+
   /* løsning */
   .loesning_grid {
     margin: 0 0 5rem 0;
@@ -499,9 +522,17 @@ h1 {
   .tema_tekst {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 3rem;
     max-width: 900px;
   }
+
+  /* fjern max-width fra tablet */
+  /* -- max width på tema tekst*/
+  .tema_tekst_og_border {
+    max-width: 900px;
+    margin-inline: auto;
+  }
+
   /* --- Hvid baggrund eunder tekst */
   .hvid_baggrund {
     margin: 0 0 6rem 0;
