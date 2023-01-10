@@ -59,9 +59,6 @@ main {
   /* så margin fordeles lige på højre og venstre */
   margin: 4rem auto 10rem auto;
 
-  /* OBS - hvordan ved banner? 
-  undersøg eller lappeløsning 
-  padding kun på mobil(tablet)*/
   padding: 0 1rem 0 1rem;
 }
 
@@ -124,7 +121,7 @@ footer p {
 .ramme_og_filter img {
   transition: ease-out 0.3s;
   /* prøver at se om de fylder rammen ud med height på 100%
-  Ja det virker, men billederne ser ikke lækre ud */
+  Ja det virker*/
   height: 100%;
   width: auto;
 }
@@ -138,15 +135,6 @@ footer p {
 .temax:hover img {
   transform: scale(1.2);
 }
-/* 
-Ser ikke fedt ud
-.temax:hover p {
-  color: var(--farve2);
-}
-
-.temax:hover {
-  border-bottom: solid 10px black;
-} */
 
 .pil_forside {
   width: 120px;
@@ -282,14 +270,7 @@ h1 {
   font-weight: 800;
 }
 
-/*-- ekstra padding melllem forskellige procesdele */
-/* .proces_ekstra_pad {
-  padding: 0 0 3rem 0;
-} */
-
 /* proces menu */
-/* lav diplay block og flex på den, eller sæt i div?, nej  */
-/* test af proces menu som flex */
 .proces_menu {
   display: flex;
   flex-wrap: wrap;
@@ -525,11 +506,6 @@ h1 {
   gap: 0.5rem 1rem;
   flex-wrap: wrap;
   margin-bottom: 1rem;
-  /* display: flex;
-  gap: 0.5rem;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  margin-bottom: 1rem; */
 }
 
 /* proces menu tema 6 */
@@ -609,62 +585,7 @@ h1 {
     gap: 2rem;
     margin: 0 0 1rem;
   }
-
-  /* .vaelg_tema {
-    display: grid;
-    grid-template-columns: repeat(3, 250px);
-    grid-template-rows: repeat(3, auto);
-    gap: 5rem;
-    width: 950px;
-    margin-inline: auto;
-
-    /* max-width: 900px; */
 }
-/* display: grid;
-  grid-template-columns: repeat(3, 250px);
-  grid-template-rows: repeat(3, auto);
-  gap: 5rem;
-  max-width: 900px;
-  margin-inline: auto; */
-
-/* .vaelg_tema {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, auto);
-    row-gap: 3rem;
-    width: 100%;
-    margin-inline: auto;
-
-    /* max-width: 900px; */
-
-/* proces og løsning og knap */
-
-/* .loesning_container {
-  max-width: 500px;
-  padding: 0 1.5rem 0 0;
-  border-right: solid 10px var(--farve2);
-}
-.loesning_container h2 {
-  font-size: 2rem;
-  text-align: right;
-}
-
-.proces_container {
-  max-width: 500px;
-}
-
-.proces_container img {
-  max-width: 500px;
-}
-*/
-
-/* .proces_loesning_grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-inline: auto;
-  gap: 80px;
-  max-width: 1080px;
-} */
 
 /* forside blomster test */
 .fs_blomster {
@@ -722,18 +643,6 @@ h1 {
   font-weight: 300;
   margin: 0 0 0 0rem;
 }
-
-/* tegninger */
-/* .tegning {
-  max-height: 350px;
-  width: auto;
-} */
-
-/* portræt */
-/* .portraet {
-  width: 100%;
-  max-width: 180px;
-} */
 
 /* personlig info */
 
@@ -832,13 +741,8 @@ h1 {
     margin-inline: auto;
     margin-top: 3rem;
   }
-  /* CV og tegninger flex */
-  /* .tegninger_cv_grid {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  } */
 
+  /* CV og tegninger flex */
   /* tegning_og_cv_grid */
   .tegning_og_cv_grid {
     display: grid;
@@ -913,19 +817,6 @@ h1 {
     margin-inline: auto;
   }
 
-  /* CV og tegninger flex */
-  /* .tegninger_cv_grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
-  } */
-
-  /* .tegninger_cv_grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  } */
-
   /* SENEST ÆNDREDE */
 
   /* det lille grid med tekst */
@@ -949,27 +840,3 @@ h1 {
     gap: 1rem;
   }
 }
-
-/* ----------- test af tegning med cv */
-
-/* tegninger med cv grid */
-/* .tegninger_cv_grid {
-  display: flex;
-  justify-content: space-between;
-} */
-
-/* 
-
-.hvid_baggrund {
-  margin: 0 0 6rem;
-  padding: 2rem 1rem 3rem 0;
-
-
-*/
-/* TEST */
-/* tegning_og_cv_grid */
-/* .tegning_og_cv_grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 1rem;
-} */

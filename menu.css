@@ -40,17 +40,18 @@ nav {
   width: 4rem;
 }
 
+/* ikke liste prikker */
 header li {
   list-style: none;
 }
 
+/* ingen deco på links */
 .nav_link {
   text-decoration: none;
   color: black;
 }
 
-/* Burger */
-
+/*---- Burger ---*/
 .burger {
   /* placering i midten af menuen (y-akse) */
   place-self: center;
@@ -59,6 +60,7 @@ header li {
   cursor: pointer;
 }
 
+/* burger barer style */
 .burger_bar {
   display: block;
   background-color: black;
@@ -66,10 +68,7 @@ header li {
   height: 5px;
   margin: 8px;
 
-  /* width: 25px;
-  height: 3px;
-  margin: 5px; */
-  /* lækker overgang til kryds, dog drop på nr2 */
+  /* lækker overgang til kryds*/
   transition: ease-in 0.4s;
 }
 
@@ -86,18 +85,17 @@ header li {
   transform: translateY(-14px) rotate(-45deg);
 }
 
+/* ---selve menu valgmulighederne--- */
 .menu_liste {
   position: fixed;
   background-color: var(--baggrundsfarve);
   width: 101%;
-  /* slide fra højre test og mindre*/
-  /* left: 100%; slide fra højre test og mindre */
 
   /* hide from view */
   left: 101%;
   /* top placering, under første menubar */
   top: 70px;
-  /* gap: 0; er denne gap overhovedet nødvendig, gap:0 , er vel default eller?*/
+
   text-align: center;
   padding-bottom: 2rem;
   border-bottom: solid black 6px;
@@ -108,13 +106,11 @@ header li {
 }
 
 .aktiv {
+  /* på minus 1, så border er skjult */
   left: -1%;
-  /* slide fra højre test og mindre*/
-  /* left: 50%; slide fra højre test og mindre */
 }
 
 /* ------ Style på menu_liste ------------- */
-
 .portfolio_om_mig {
   font-family: poppins;
   font-weight: bold;
@@ -134,24 +130,7 @@ header li {
   margin-top: 1.5rem;
 }
 
-/* menu_liste som flexbox, med gap som afstand mellem linjer */
-/* .menu_liste {
-  position: fixed;
-  background-color: pink;
-  width: 100%;
-  left: -100%;
-  top: 70px;
-  gap: 7px;
-  text-align: center;
-  padding-bottom: 2rem;
-  border-bottom: solid black 6px;
-  border-right: solid black 6px;
-  transition: ease-in 0.5s;
-  display: flex;
-  flex-direction: column;
-} */
-
-/* ------ Midlertidigt logo navn */
+/* ------ logo navn */
 .logo_navn {
   display: flex;
 }
