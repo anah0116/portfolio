@@ -586,41 +586,25 @@ h1 {
     margin: 0 0 1rem;
   }
 }
-/* NYYYYYYYY ned */
+
+/* Forside titel og blomster */
+/* forside blomsterne */
 .fs_blomster {
-  max-width: 600px;
+  max-width: 100%;
 }
 
+/* grid til blomster og tekst */
 .fs_blomster_titel_grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 500fr 700fr;
+  max-width: 1250px;
 }
 
-/* .fs_blomster_titel_grid {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-} */
-/* NYYYYYYYY op */
-
-/* OOOOOGGGGGG ned*/
-/* forside blomster test */
-/* .fs_blomster {
-  max-width: 600px;
-} */
-
-/* .fs_blomster_titel_grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-} */
-
-/* .fs_blomster_titel_grid {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-} */
-
-/* OOOOOOOGGGGG op */
+/* så titlen er i midten fra top mod bund */
+.ny_class_til_titel {
+  margin-top: auto;
+  margin-bottom: auto;
+}
 
 /* Om mig tester */
 /* CV */
