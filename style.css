@@ -586,22 +586,41 @@ h1 {
     margin: 0 0 1rem;
   }
 }
-
-/* forside blomster test */
+/* NYYYYYYYY ned */
 .fs_blomster {
   max-width: 600px;
 }
+
+.fs_blomster_titel_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* .fs_blomster_titel_grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} */
+/* NYYYYYYYY op */
+
+/* OOOOOGGGGGG ned*/
+/* forside blomster test */
+/* .fs_blomster {
+  max-width: 600px;
+} */
 
 /* .fs_blomster_titel_grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
 } */
 
-.fs_blomster_titel_grid {
+/* .fs_blomster_titel_grid {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
+} */
+
+/* OOOOOOOGGGGG op */
 
 /* Om mig tester */
 /* CV */
